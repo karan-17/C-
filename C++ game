@@ -1,0 +1,65 @@
+#include <iostream.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <dos.h>
+#include <time.h>
+int main ()
+{
+char k, val1;
+int l, val2, ch1;
+for (int m=0; m<=9; m++)
+{
+cout<<">>>>";
+delay (100);
+}
+cout<<endl;
+gotoxy(20,8); cout<<" _______________________________"<<endl;
+gotoxy(20,9); cout<<"|   Press 1 to enter the game   |"<<endl;
+gotoxy(20,10); cout<<"|   Press 0 to exit the game    |"<<endl;
+gotoxy(20,11); cout<<"|    {LISTIKA ESTIMATOR}      |"<<endl;
+gotoxy(20,12); cout<<"|_______________________________|"<<endl;
+cout<<"Enter your choice {1/0}:";
+cin>>ch1;
+cout<<endl;
+if (ch1==1)
+{
+	gotoxy(20,21); cout<<"***************************************"<<endl;
+	gotoxy(20,22); cout<<"**  WELCOME TO LISTIKA ESTIMATOR     **"<<endl;
+	gotoxy(20,23); cout<<"***************************************"<<endl;
+
+	 srand(time(0));
+
+      int number;
+
+      number = rand() % 1000 + 1;
+
+      int guess;
+
+      do {
+
+            cout << "Enter your estimate: ";
+
+            cin >> guess;
+
+            if (guess < number)
+
+                  cout << "Your estimate is less, than the secret number" << endl;
+
+            else if (guess > number)
+
+                  cout << "Your estimate is more, than the secret number" << endl;
+
+            else
+
+                  cout << "Your guess is right!" << endl;
+
+      } while (guess != number);
+
+      system("PAUSE");
+
+      return 0;
+	}
+else
+ return 0;
+}
